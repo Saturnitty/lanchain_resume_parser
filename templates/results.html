@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Ranking Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Ranking Results</h1>
+        <h2>Overall Ranking</h2>
+        <div class="table-container">
+            {{ overall_ranking | safe }}
+        </div>
+        
+        <h2>Similarity Ranking</h2>
+        <div class="table-container">
+            {{ similarity_ranking | safe }}
+        </div>
+        
+        <h2>Experience Ranking</h2>
+        <div class="table-container">
+            {{ experience_ranking | safe }}
+        </div>
+        
+        <h2>Skill Ranking</h2>
+        <div class="table-container">
+            {{ skill_ranking | safe }}
+        </div>
+        
+        <a href="/" class="button">Go Back</a>
+    </div>
+</body>
+</html>

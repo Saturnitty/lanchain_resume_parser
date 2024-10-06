@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Ranking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Ranking System</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="job_description">Job Description:</label>
+            <textarea id="job_description" name="job_description" rows="6" required></textarea>
+            
+            <label for="resumes_directory">Resumes Directory:</label>
+            <input type="text" id="resumes_directory" name="resumes_directory" required>
+            
+            <button type="submit">Rank Resumes</button>
+        </form>
+    </div>
+</body>
+</html>
